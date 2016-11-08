@@ -10,10 +10,10 @@ function getData(callback){
     }
     else {
     $('#result-list').append('<p>' + 'Found ' + stuff.length+ ' result(s):'  + '</p>');
-    for (i=0; i < stuff.length; i++){
-    $('#result-list').append('<li>' + stuff[i].title  + '</li>');
-    $('#result-list').append('<li>' + stuff[i].url  + '</li>');
-}
+   stuff.forEach(function(stuffs){
+     $('#result-list').append('<li>' + stuffs.title  + '</li>');
+     $('#result-list').append('<li>' + stuffs.url  + '</li>');
+   });
   }
 });
 });
